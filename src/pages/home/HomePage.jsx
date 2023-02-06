@@ -1,5 +1,4 @@
 import { Box, Container, Button } from "@mui/material";
-import styles from "../home/HomePage.module.css";
 import React, { useState, useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -62,12 +61,22 @@ const Home = () => {
           paddingBottom: "20px",
         }}
       >
-        <h1 className={styles.title}>Users list</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            marginTop: "20px",
+
+          }}
+        >
+          Users list
+        </h1>
 
         <Box
           sx={{
             paddingTop: "20px",
             paddingBottom: "40px",
+            marginTop: "16px",
+            marginBottom: "32px",
           }}
         >
           <Box
@@ -112,7 +121,7 @@ const Home = () => {
             <CircularProgress />
           </div>
         ) : (
-          <TableContainer component={Paper} className={styles["table-users"]}>
+          <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
