@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-API [https://randomuser.me/api/]
+API [https://randomuser.me/api/](https://randomuser.me/api/)
 
 ## Learn More
 
@@ -41,4 +41,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Material UI
 
-DEMO [https://twendee-assignment.vercel.app/]
+DEMO [https://twendee-assignment.vercel.app/](https://twendee-assignment.vercel.app/)
