@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Image from "next/image";
 
 const darkTheme = createTheme({
   palette: {
@@ -33,6 +34,16 @@ const Header = () => {
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 User management app
               </Typography>
+              <img src="dsfs" alt="" />
+              <Image
+                src="/avatar.jpg"
+                alt="avatar"
+                width={50}
+                height={50}
+                style={{
+                  borderRadius: "50%",
+                }}
+              />
               <Button color="inherit">P.D.Trung</Button>
             </Toolbar>
           </AppBar>
