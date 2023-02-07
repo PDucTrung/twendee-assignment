@@ -34,7 +34,6 @@ const Header = () => {
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 User management app
               </Typography>
-              <img src="dsfs" alt="" />
               <Image
                 src="/avatar.jpg"
                 alt="avatar"
