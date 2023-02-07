@@ -1,5 +1,5 @@
 import { Box, Container, Button } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo, useCallback } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -22,7 +22,8 @@ import {
 
 const Home = () => {
   const [page, setPage] = useState(0);
-  const [sort, setSort] = React.useState("");
+  const [sort, setSort] = useState("");
+
   const dispatch = useDispatch();
 
   // loading users
@@ -30,7 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(loadUsers(page + 1));
-  }, [page]);
+  }, [dispatch, page]);
 
   // users list
   const { users, sortByUserName, sortByUserFullName, clearFilter } =
@@ -41,7 +42,7 @@ const Home = () => {
     return title + ". " + first + " " + last;
   };
 
-  // panigation handler
+  // panigation change event
   const handleChangePage = (event, newPage) => {
     setSort("");
     setPage(newPage);
@@ -65,12 +66,12 @@ const Home = () => {
           style={{
             textAlign: "center",
             marginTop: "20px",
-
           }}
         >
           Users list
         </h1>
 
+        {/* sort UI */}
         <Box
           sx={{
             paddingTop: "20px",
@@ -113,6 +114,7 @@ const Home = () => {
           </Box>
         </Box>
 
+        {/* table UI */}
         {loading ? (
           <div className="loading">
             <div>

@@ -8,6 +8,7 @@ const initialState = {
   dataDefault: [],
 };
 
+// thunk api
 export const loadUsers = createAsyncThunk(
   "users/loadloadUsers",
   async (page) => {
@@ -20,6 +21,7 @@ export const loadUsers = createAsyncThunk(
   }
 );
 
+// slice
 const usersSlice = createSlice({
   name: "users",
   initialState,
@@ -81,6 +83,7 @@ export const usersReducer = usersSlice.reducer;
 export const { sortByUserName, sortByUserFullName, clearFilter } =
   usersSlice.actions;
 
+// selectors
 export const selectUsersStatus = (state) => state.users.loading;
 
 export const selectUsers = (state) => {
